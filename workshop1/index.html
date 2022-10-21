@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <div id="container">
+            <form action="targetfile.php" method="get">
+                Voornaam: <input type="text" name="vnaam" placeholder="Voornaam"/><br>
+                Achternaam: <input type="text" name="anaam" placeholder="Achternaam"/><br>
+                <input type="date" name="datum" placeholder="geboortedatum"/><br>
+                <input type="datetime-local" name="datetimelocal"/><br>
+                <input type="Time" name="justtime"/><br>
+                <input type="Week" name="week"/><br>
+                <input type="Month" name="month"/><br>
+                <input id="country" type="text" name="country" size="40" list="countries"/><br>
+                <input type="number" name="num"/><br>
+                <input type="number" name="num2" min="5" max="100" step="5" value="10"/><br>
+                <input type="email" name="email" required="true"/><br>
+                <input type="file" name="file"/><br>
+                <input type="color" name="color"/><br>
+                <input type="range" name="range" min="1" max="10"/><br>
+                <datalist id="countries">
+                    <option value="USA">
+                    <option value="United Kingdom">
+                    <option value="France">
+                    <option value="Norway">
+                    <option value="Germany">
+                    <option value="Australia">
+                    <option value="Netherlands">
+                </datalist>
+                <input type="submit"/>
+            </form>
+        </div>
+    </body>
+</html>
