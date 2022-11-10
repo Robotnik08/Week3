@@ -1,0 +1,122 @@
+html, body {
+    height: 100%;
+}
+body {
+    margin:0;
+    background-color: lightblue;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+#content {
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    flex-direction: row;
+}
+#header {
+    height: 24%;
+    width: 100%;
+    display: flex;
+}
+#footer {
+    background-color: lightyellow;
+    height: 20%;
+    width: 100%;
+    bottom: 0;
+    margin-top: 20px;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+}
+#sidebarleft {
+    background-color: #fafafa;
+    width: 40%;
+    border-radius: 20px 0 0 20px;
+}
+#middle {
+    background-color: #f1f1f1;
+    width: 100%;
+    min-height: 700px;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+}
+#main {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    width: min(100% - 6rem, 65rem);
+    margin: 0 auto;
+}
+#mainwrapper {
+    height: 100%;
+    width: 100%;
+    padding-top: 20px;
+}
+#headerwrapper {
+    background-color: #DDDDDD;
+    border-radius: 10px;
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    font-size: xxx-large;
+    overflow: hidden;
+}
+h1 {
+    margin-top: 40px;
+}
+.item {
+    margin: 10px;
+    width: 220px;
+    height: 220px;
+    background-color: black;
+    display: inline-block;
+    border: 1px #444444 solid;
+    overflow: hidden;
+    background-image: linear-gradient(red, yellow);
+    border-radius: 10px;
+}
+.item .wrapper {
+    background-image: linear-gradient(darkred, #330000);
+    margin: -1px;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    transition: 0.2s;
+    border-radius: 10px;
+    z-index: 5;
+    border: 1px #444444 solid;
+}
+.item .wrapper:hover {
+    opacity: 0;
+}
+.item .wrapper:hover + .second-wrapper img {
+    scale: 120%;
+}
+.item .second-wrapper img {
+    scale: 100%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    opacity: 1;
+    transition: 0.2s;
+}
+.second-wrapper {
+    position: relative;
+    pointer-events:none;
+    top: -100%;
+    height: 100%;
+    width: 100%;
+}
+.footer-item {
+    margin: 0;
+    background-color: rgba(0,255,255,0.8);
+    position: relative;
+    top: -23%;
+    height: 34%;
+}
+.footer-item p {
+    margin:0;
+}
+.header-p {
+    font-size: 120%;
+    font-weight: 900;
+}

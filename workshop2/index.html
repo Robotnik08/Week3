@@ -7,7 +7,66 @@
     <body>
         <div id="container">
             <div id="header"></div>
-            
+            <div id="main">
+                <div id="firstheader">
+                    <h2>JE GEGEVENS<span style="color: orange">.</span></h2>
+                    <p>Wat moet er op de factuur staan?</p>
+                </div>
+                <form id="main-form" action="result.php" method="get">
+                    <div id="mainform">
+                        <div id="lable">
+                            <p>Type bestelling</p>
+                            <p>Aanhef</p>
+                            <p>Naam</p>
+                            <p>Postcode</p>
+                            <p>Huisnummer</p>
+                            <p>Land</p>
+                            <p>Afleveradres</p>
+                            <p>E-mailadres</p>
+                            <p>Telefoonnummer</p>
+                            <p>Geboortedatum</p>
+                            <p>Verzendwijze factuur</p>
+                            <p>Nieuwsbrief</p>
+                            <p>Kleur verpakking</p>
+                        </div>
+                        <div id="form">
+                            <p><input type="radio" value="Particulier" name="typebestelling"/>Particulier<input type="radio" value="Zakelijk" name="typebestelling"/>Zakelijk</p>
+                            <p><input type="radio" value="M" name="aanhef"/>Dhr.<input type="radio" value="F" name="aanhef"/>Mevr.</p>
+                            <p><input placeholder="Voornaam" name="vn"/><input placeholder="Tussenv." name="tv" style="width: 70px;"/><input placeholder="Achternaam" name="an"/></p>
+                            <p><input placeholder="1234AB" name="pc" style="width: 70px;"/></p>
+                            <p><input placeholder="Nr." name="hn1" style="width: 50px;"/><input placeholder="Toev." name="hn2" style="width: 50px;"/></p>
+                            <p>Nederland <span onclick="alert('Error, België heeft pech')" style="color:blue"><u>> In België laten bezorgen</u></span></p>
+                            <p><input type="radio" value="boven" name="aflevera"/>Op bovenstaand adres bezorgen<input type="radio" value="ander" name="aflevera"/>Op ander adres bezorgen</p>
+                            <p><input type="email" name="email"></p>
+                            <p><input type="number" name="phonenumber"></p>
+                            <p><input type="date" name="birthday"></p>
+                            <p><input type="radio" value="email" name="factuur"/>Factuur per e-mail<input type="radio" value="bestelling" name="factuur"/>Factuur geprint bij de bestelling</p>
+                            <p><input type="checkbox" name="nieuwsbrief"/> Ja, ik wil de Coolblue-nieuwsbrief met <b style="color: orange;">€5,- cadeaubon </b> voor mijn volgende bestelling</p>
+                            <p><input type="color" name="colorproduct" style="width: 200px;"/></p> 
+                        </div>
+                    </div>
+                    <div id="secondheader">
+                        <h2>BEWAAR JE GEGEVENS<span style="color: orange">.</span></h2>
+                        <p>Handig voor de volgende keer.</p>
+                    </div>
+                    <div id="secform">
+                        <div id="lable">
+                            <p>Wachtwoord</p><br><br>
+                            <p>Wachtwoord bevestigen</p>
+                        </div>
+                        <div id="form">
+                            <p><input type="password" name="password"/></p>
+                            <p style="color:gray">Minimaal 6 karakters <br>Verder dan dat doen we niet zo moeilijk</p>
+                            <p><input type="password" name="passwordbev"/></p>
+                        </div>
+                    </div>
+                    <div id="submitfield">
+                        <div id="submitbutton" onclick="document.getElementById('main-form').submit()">
+                            Verder
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
 
     </body>
